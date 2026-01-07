@@ -5,7 +5,7 @@ import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
-import Hero from "@/components/Hero";
+import Home from "@/components/Home";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-export default function Home() {
+export default function App() {
   return (
     <>
       <ScrollUp />
-      <Hero />
+      <Home />
       <Features />
       <Video />
       <Brands />

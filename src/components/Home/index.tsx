@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {MdOutlineSearch, MdOutlineEmail} from 'react-icons/md';
 
-const Hero = () => {
+const Home = () => {
   return (
     <>
       <section
@@ -14,8 +14,11 @@ const Hero = () => {
               <div className="mx-auto max-w-[800px] text-center">
                 <h1
                   className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Capo Serramenti - la soluzione per la tua casa a portata di mano
+                  Capo Serramenti
                 </h1>
+                <h2 className="mb-5 text-xl font-medium leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
+                  la soluzione per la tua casa a portata di mano
+                </h2>
                 <p
                   className="mb-12 text-base leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   Serramenti, infissi e zanzariere su misura a Capaccio Paestum, Salerno. Qualità artigianale,
@@ -290,4 +293,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
