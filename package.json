@@ -1,38 +1,30 @@
 {
-  "name": "@once-ui-system/magic-portfolio",
-  "version": "2.3.0",
+  "name": "astroship",
+  "type": "module",
+  "version": "3.0.0",
+  "private": true,
   "scripts": {
-    "dev": "next dev",
-    "export": "next export",
-    "build": "next build",
-    "biome-write": "npx @biomejs/biome format --write .",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.1.0",
-    "@next/mdx": "^16.0.7",
-    "@once-ui-system/core": "^1.5.6",
-    "classnames": "^2.5.1",
-    "cookie": "^1.0.2",
-    "gray-matter": "^4.0.3",
-    "lint-staged": "^16.1.5",
-    "next": "^16.0.7",
-    "next-mdx-remote": "^5.0.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-icons": "^5.5.0",
-    "sass": "^1.86.3",
-    "transliteration": "^2.3.5"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@types/cookie": "^0.6.0",
-    "@types/node": "^20.17.30",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.5",
-    "eslint": "^9.25.0",
-    "typescript": "^5.8.3",
-    "tzdata": "^1.0.44"
+    "@astrojs/mdx": "^4.2.0",
+    "@astrojs/sitemap": "^3.2.1",
+    "@fontsource-variable/bricolage-grotesque": "^5.2.5",
+    "@fontsource-variable/inter": "^5.2.5",
+    "@iconify-json/bx": "^1.2.2",
+    "@iconify-json/simple-icons": "^1.2.28",
+    "@iconify-json/uil": "^1.2.3",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.0.14",
+    "astro": "^5.5.2",
+    "astro-icon": "^1.1.5",
+    "astro-navbar": "^2.3.9",
+    "astro-seo": "^0.8.4",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.0.14"
   }
 }
