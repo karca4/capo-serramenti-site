@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {MdOutlineSearch, MdOutlineEmail} from 'react-icons/md';
 
-const Home = () => {
+const Hero = () => {
   return (
     <>
       <section
@@ -293,4 +293,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Hero;
