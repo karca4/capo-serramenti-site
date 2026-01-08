@@ -64,7 +64,8 @@ const Footer = () => {
                 <h1 className="mb-6 text-xl font-bold text-black dark:text-white">
                   Capo Serramenti
                 </h1>
-                <p>di Valentino Capo<br/>Via Ponte Marmoreo 28,<br/>Capaccio Paestum, Salerno</p>
+                <h2 className="mb-2 font-semibold text-black dark:text-white">P.IVA IT05563010650</h2>
+                <p>di Valentino Capo<br/>Via Ponte Marmoreo 28,<br/>Capaccio Paestum (SA)</p>
               </div>
             </div>
 

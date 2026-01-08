@@ -78,7 +78,7 @@ const ContactBox = () => {
         </a>
       </div>
       <div
-        className="border-body-color/25 text-body-color mb-11 border-b pb-11 text-base leading-relaxed dark:border-white/25">
+        className="text-body-color mb-11 pb-11 text-base leading-relaxed">
         <h3 className="mb-4 text-xl leading-tight text-black dark:text-white">
           Social
         </h3>
