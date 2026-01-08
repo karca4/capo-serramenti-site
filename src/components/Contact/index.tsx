@@ -1,4 +1,5 @@
-import NewsLatterBox from "./NewsLatterBox";
+import ContactBox from "./ContactBox";
+import {MdMail} from "react-icons/md";
 
 const Contact = () => {
   return (
@@ -12,70 +13,56 @@ const Contact = () => {
               "
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Need Help? Open a Ticket
+                Un contatto diretto, una soluzione su misura
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                Our support team will get back to you ASAP via email.
+                Capo Serramenti ti aspetta presso la sua sede operativa e showroom a Capaccio Paestum (Salerno), il
+                luogo ideale per toccare con mano la qualità dei nostri serramenti, infissi e zanzariere su misura.
+                <br/>
+                Siamo a disposizione per consulenze personalizzate, sopralluoghi e preventivi gratuiti, accompagnandoti
+                in ogni fase del progetto, dalla scelta dei materiali alla realizzazione finale.
               </p>
-              <form>
-                <div className="-mx-4 flex flex-wrap">
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="name"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Enter your name"
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="email"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Email
-                      </label>
-                      <input
-                        type="email"
-                        placeholder="Enter your email"
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="message"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Message
-                      </label>
-                      <textarea
-                        name="message"
-                        rows={5}
-                        placeholder="Enter your Message"
-                        className="border-stroke w-full resize-none rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <button className="rounded-xs bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      Submit Ticket
-                    </button>
-                  </div>
-                </div>
-              </form>
+              <h3 className="mb-3 text-xl text-black dark:text-white sm:text-3xl lg:text-xl xl:text-2xl">
+                Dove siamo
+              </h3>
+              <p className="text-base font-medium text-body-color">
+                La sede di Capo Serramenti si trova in:
+                <br/>
+                <span className="font-bold">Via Ponte Marmoreo 28, 84047 – Capaccio Paestum (SA)</span>
+                <br/>
+                <br/>
+                Presso il nostro showroom potrai:
+                <ul className="list-disc list-inside">
+                  <li>vedere da vicino infissi e serramenti su misura</li>
+                  <li>valutare materiali, finiture e soluzioni tecniche</li>
+                  <li>ricevere assistenza diretta e professionale</li>
+                </ul>
+                <br/>
+                <br/>
+                Operiamo principalmente a Capaccio Paestum e in tutta la provincia di Salerno, con possibilità di
+                interventi anche su scala nazionale.
+              </p>
+              <iframe className="border-0 my-12"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41822.8037794231!2d15.000045849029387!3d40.43288685940191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bfd7d14a7f02b%3A0xdec7c3a2c8d1b32c!2sCapo%20Serramenti%20di%20Valentino%20Capo.%20Infissi%20in%20alluminio%2C%20pvc%2C%20ferro.!5e1!3m2!1sen!2sit!4v1767871600352!5m2!1sen!2sit"
+                      width="800" height="650" allowFullScreen={true} loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade">
+              </iframe>
+
+              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+                Scrivici per un preventivo gratuito
+              </h2>
+              <p className="mb-3 text-base font-medium text-body-color">
+                Che tu stia ristrutturando casa o progettando una nuova installazione, Capo Serramenti è il partner
+                giusto per soluzioni affidabili, durature e personalizzate.
+                <br/><br/>
+                Scrivi una mail all'indirizzo
+                <span className="font-bold"><a href="mailto:caposerramenti@gmail.com"> caposerramenti@gmail.com </a></span>
+                per richiedere un preventivo gratuito e senza impegno
+              </p>
             </div>
           </div>
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
+            <ContactBox/>
           </div>
         </div>
       </div>
