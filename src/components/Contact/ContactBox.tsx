@@ -44,7 +44,7 @@ const ContactBox = () => {
           <span className="font-bold"><MdPhone className="inline-block mr-0.5"/> Cellulare: +39 338 3328269</span>
         </a>
         <a
-          href="wa.me//393383328269"
+          href="https://wa.me/393383328269"
           aria-label="social-link"
           target="_blank"
           rel="noopener noreferrer"

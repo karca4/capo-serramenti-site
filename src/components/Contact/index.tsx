@@ -44,7 +44,7 @@ const Contact = () => {
               </p>
               <iframe className="border-0 my-12"
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41822.8037794231!2d15.000045849029387!3d40.43288685940191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bfd7d14a7f02b%3A0xdec7c3a2c8d1b32c!2sCapo%20Serramenti%20di%20Valentino%20Capo.%20Infissi%20in%20alluminio%2C%20pvc%2C%20ferro.!5e1!3m2!1sen!2sit!4v1767871600352!5m2!1sen!2sit"
-                      width="800" height="650" allowFullScreen={true} loading="lazy"
+                      width="100%" height="650" allowFullScreen={true} loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade">
               </iframe>
 
@@ -56,7 +56,8 @@ const Contact = () => {
                 giusto per soluzioni affidabili, durature e personalizzate.
                 <br/><br/>
                 Scrivi una mail all'indirizzo
-                <span className="font-bold"><a href="mailto:caposerramenti@gmail.com"> caposerramenti@gmail.com </a></span>
+                <span className="font-bold"><a
+                  href="mailto:caposerramenti@gmail.com"> caposerramenti@gmail.com </a></span>
                 per richiedere un preventivo gratuito e senza impegno
               </p>
             </div>
