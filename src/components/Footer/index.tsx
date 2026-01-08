@@ -29,7 +29,7 @@ const Footer = () => {
                 </Link>
                 <div className="flex items-center">
                   <a
-                    href="https://facebook.com/CapoValentino"
+                    href="https://facebook.com/CapoSerramenti"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
