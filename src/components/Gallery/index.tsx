@@ -1,75 +1,209 @@
+"use client";
+
 import Image from "next/image";
-import SectionTitle from "../Common/SectionTitle";
+import {Suspense, useCallback, useEffect, useRef, useState} from "react";
+import {AnimatePresence, motion} from "framer-motion";
+import {ChevronLeft, ChevronRight, X} from "lucide-react";
+import axios from "axios";
+import {useSearchParams} from "next/navigation";
+import SectionTitle from "@/components/Common/SectionTitle";
 
-const checkIcon = (
-  <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
-    <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
-  </svg>
-);
+export interface GalleryImage {
+  url: string;
+  title?: string;
+  description?: string;
+}
 
-const AboutSectionOne = () => {
-  const List = ({ text }) => (
-    <p className="text-body-color mb-5 flex items-center text-lg font-medium">
-      <span className="bg-primary/10 text-primary mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md">
-        {checkIcon}
-      </span>
-      {text}
-    </p>
+export default function GalleryPage() {
+  return (
+    <Suspense fallback={<div>Loading gallery...</div>}>
+      <GalleryPageContent/>
+    </Suspense>
+  );
+}
+
+function GalleryPageContent() {
+  const searchParams = useSearchParams();
+  const tagsParam = searchParams.getAll("imageTags");
+  const imageTags = tagsParam ? tagsParam : undefined;
+
+  const [images, setImages] = useState<GalleryImage[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [index, setIndex] = useState<number | null>(null);
+  const [nextCursor, setNextCursor] = useState<string | null>(null);
+  const [hasMore, setHasMore] = useState(true);
+
+  // Prevent double fetch in dev/StrictMode
+  const didFetchOnMount = useRef(false);
+  // Ref to store scroll position and lazy loading flag
+  const scrollYRef = useRef<number | null>(null);
+
+  // Funzione per recuperare le immagini, supporta imageTags
+  const fetchImages = useCallback(
+    async (cursor?: string) => {
+      if (loading || !hasMore) return;
+      setLoading(true);
+      try {
+        const params: { max_results: number; next_cursor?: string; tags?: string } = {
+          max_results: 20,
+        };
+        if (cursor) params.next_cursor = cursor;
+        if (imageTags && imageTags.length > 0) params.tags = imageTags.join(",");
+        const res = await axios.get("/api/gallery", {params});
+        const {images: newImages, next_cursor} = res.data;
+        setImages((prev) => [...prev, ...newImages]);
+        setNextCursor(next_cursor || null);
+        setHasMore(!!next_cursor);
+        setError(null);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError(String(err));
+        }
+      } finally {
+        setLoading(false);
+      }
+    },
+    [loading, hasMore, imageTags]
   );
 
+  // Fetch images on mount or when imageTags changes
+  useEffect(() => {
+    if (didFetchOnMount.current) return;
+    didFetchOnMount.current = true;
+    fetchImages().then(() => {
+    });
+  }, [fetchImages]);
+
+  // Lazy loading on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 &&
+        hasMore &&
+        !loading
+      ) {
+        scrollYRef.current = window.scrollY;
+        fetchImages(nextCursor || undefined).then(v => v);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [fetchImages, hasMore, loading, nextCursor]);
+
+  useEffect(() => {
+    if (scrollYRef.current !== null) {
+      window.scrollTo(0, scrollYRef.current);
+      scrollYRef.current = null;
+    }
+  }, [images]);
+
+  const closeModal = () => setIndex(null);
+  const showNext = useCallback(
+    () => index !== null && setIndex((index + 1) % images.length),
+    [index, images.length]
+  );
+  const showPrev = useCallback(
+    () =>
+      index !== null && setIndex((index - 1 + images.length) % images.length),
+    [index, images.length]
+  );
+
+  // Gestione tastiera
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (index === null) return;
+      if (e.key === "ArrowRight") showNext();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "Escape") closeModal();
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [index, showNext, showPrev]);
+
+  if (loading) return <div>Loading images...</div>;
+  if (error) return <div>Error: {error}</div>;
+
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
-      <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
-                mb="44px"
+    <section id="gallery" className="overflow-hidden py-16 md:py-20 lg:py-28">
+      <div id="company-history" className="container">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {images.map((img, i) => (
+            <motion.div
+              key={i}
+              whileHover={{scale: 1.02}}
+              className="cursor-pointer overflow-hidden rounded-xl shadow-sm"
+              onClick={() => setIndex(i)}
+            >
+              <Image
+                src={img.url}
+                alt={img.title || img.description || `Image ${i + 1}`}
+                width={400}
+                height={300}
+                className="w-full h-48 object-cover"
+              />
+            </motion.div>
+          ))}
+        </div>
+
+      {/* Modal con navigazione */}
+      <AnimatePresence>
+        {index !== null && (
+          <motion.div
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            onClick={closeModal}
+          >
+            <motion.div
+              className="relative max-w-4xl w-full max-h-[90vh]"
+              initial={{scale: 0.9}}
+              animate={{scale: 1}}
+              exit={{scale: 0.9}}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={images[index].url}
+                alt={images[index].title || images[index].description || `Image ${index + 1}`}
+                width={1200}
+                height={800}
+                className="w-full h-auto rounded-xl max-h-[80vh] object-contain"
               />
 
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
+              {/* Chiudi */}
+              <button
+                onClick={closeModal}
+                className="absolute top-2 right-2 p-2 rounded-full bg-white text-black hover:bg-gray-100"
+                aria-label="Chiudi"
               >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
-                  </div>
+                <X size={24}/>
+              </button>
 
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
-                  </div>
-                </div>
-              </div>
-            </div>
+              {/* Freccia sinistra */}
+              <button
+                onClick={showPrev}
+                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white text-black hover:bg-gray-100"
+                aria-label="Precedente"
+              >
+                <ChevronLeft size={28}/>
+              </button>
 
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-25/24 max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/about/about-image.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+              {/* Freccia destra */}
+              <button
+                onClick={showNext}
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white text-black hover:bg-gray-100"
+                aria-label="Successivo"
+              >
+                <ChevronRight size={28}/>
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       </div>
     </section>
   );
-};
-
-export default AboutSectionOne;
+}

@@ -1,6 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
-import Gallery from "@/components/Gallery";
+import Gallery from "@/components/Gallery_old";
 
 export const metadata: Metadata = {
   title: "Contact Page | Free Next.js Template for Startup and SaaS",
@@ -12,8 +12,8 @@ const GalleryPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Galleria"
-        description="Il nostro lavoro, sotto i tuoi occhi"
+        pageName="Contact Page"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
 
       <Gallery />
