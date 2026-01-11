@@ -1,5 +1,6 @@
 import ContactBox from "./ContactBox";
 import {MdMail} from "react-icons/md";
+import SectionTitle from "@/components/Common/SectionTitle";
 
 const Contact = () => {
   return (
@@ -26,19 +27,18 @@ const Contact = () => {
                 Dove siamo
               </h3>
               <p className="text-base font-medium text-body-color">
-                La sede di Capo Serramenti si trova in:
-                <br/>
-                <span className="font-bold">Via Ponte Marmoreo 28, 84047 – Capaccio Paestum (SA)</span>
-                <br/>
-                <br/>
+                La sede di Capo Serramenti si trova in
+                <span className="font-bold"> Via Ponte Marmoreo 28, 84047 – Capaccio Paestum (SA)</span>
+                <br/><br/>
                 Presso il nostro showroom potrai:
-                <ul className="list-disc list-inside">
-                  <li>vedere da vicino infissi e serramenti su misura</li>
-                  <li>valutare materiali, finiture e soluzioni tecniche</li>
-                  <li>ricevere assistenza diretta e professionale</li>
-                </ul>
-                <br/>
-                <br/>
+              </p>
+              <ul className="list-disc list-inside text-base font-medium text-body-color">
+                <li>vedere da vicino infissi e serramenti su misura</li>
+                <li>valutare materiali, finiture e soluzioni tecniche</li>
+                <li>ricevere assistenza diretta e professionale</li>
+              </ul>
+              <br/>
+              <p className="text-base font-medium text-body-color">
                 Operiamo principalmente a Capaccio Paestum e in tutta la provincia di Salerno, con possibilità di
                 interventi anche su scala nazionale.
               </p>
