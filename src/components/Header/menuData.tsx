@@ -39,7 +39,7 @@ const menuData: Menu[] = [
       {
         id: 24,
         title: "Lavorazioni in Ferro",
-        path: "/blog-sidebar",
+        path: "/product-details",
         newTab: false,
       },
       {
