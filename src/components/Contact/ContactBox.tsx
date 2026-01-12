@@ -1,12 +1,9 @@
 "use client";
 
-import {useTheme} from "next-themes";
 import {MdEmail, MdPhone} from "react-icons/md";
 import {FaFacebook, FaInstagram, FaWhatsapp} from "react-icons/fa";
 
 const ContactBox = () => {
-  const {theme} = useTheme();
-
   return (
     <div className="shadow-three dark:bg-gray-dark relative z-10 rounded-xs bg-white p-8 sm:p-11 lg:p-8 xl:p-11">
       <h3 className="mb-4 text-3xl leading-tight text-black dark:text-white">

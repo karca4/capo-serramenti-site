@@ -1,4 +1,3 @@
-import RelatedPost from "@/components/Blog/RelatedPost";
 import ContactBox from "@/components/Contact/ContactBox";
 import Image from "next/image";
 
@@ -103,32 +102,6 @@ const ProductDetailsPage = () => {
                 <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
                   Related Posts
                 </h3>
-                <ul className="p-8">
-                  <li className="border-body-color/10 mb-6 border-b pb-6 dark:border-white/10">
-                    <RelatedPost
-                      title="Best way to boost your online sales."
-                      image="/images/blog/post-01.jpg"
-                      slug="#"
-                      date="12 Feb 2025"
-                    />
-                  </li>
-                  <li className="border-body-color/10 mb-6 border-b pb-6 dark:border-white/10">
-                    <RelatedPost
-                      title="50 Best web design tips & tricks that will help you."
-                      image="/images/blog/post-02.jpg"
-                      slug="#"
-                      date="15 Feb, 2024"
-                    />
-                  </li>
-                  <li>
-                    <RelatedPost
-                      title="The 8 best landing page builders, reviewed"
-                      image="/images/blog/post-03.jpg"
-                      slug="#"
-                      date="05 Jun, 2024"
-                    />
-                  </li>
-                </ul>
               </div>
               <ContactBox />
             </div>
