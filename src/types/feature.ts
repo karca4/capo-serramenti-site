@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 export type Feature = {
-  id: number;
+  id: string;
   icon: JSX.Element;
   title: string;
   paragraph: string;
