@@ -24,7 +24,8 @@ const productsData: Feature[] = [
         title: "PVC",
         paragraph: "il pvc è bello"
       }
-    ]
+    ],
+    gallery: "/gallery?imageTags=alluminio"
   },
   {
     id: "pvc",

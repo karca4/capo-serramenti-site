@@ -7,4 +7,5 @@ export type Feature = {
   description?: string;
   image?: string;
   relatedFeatures?: Feature[];
+  gallery?: string
 };

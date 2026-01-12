@@ -4,6 +4,7 @@ import Image from "next/image";
 import ContactBox from "@/components/Contact/ContactBox";
 import {Feature} from "@/types/feature";
 import RelatedProduct from "@/components/Products/RelatedProduct";
+import TagButton from "@/components/Blog/TagButton";
 
 const ProductDetails = ({product}: { product: Feature }) => {
   return (
@@ -57,6 +58,9 @@ const ProductDetails = ({product}: { product: Feature }) => {
                     </p>
                   </div>
                 </div>
+                {product.gallery &&
+                  <TagButton text="Visita la galleria per questo prodotto" href={product.gallery}></TagButton>
+                }
               </div>
             </div>
             <div className="w-full px-4 lg:w-4/12">
