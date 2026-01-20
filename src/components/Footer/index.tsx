@@ -13,18 +13,18 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
-                    src="/images/logo/logo-esteso.svg"
+                    src="/images/logo/logo-simbolo.svg"
                     alt="logo"
-                    className="w-full dark:hidden"
-                    width={140}
-                    height={30}
+                    className="dark:hidden"
+                    width={100}
+                    height={50}
                   />
                   <Image
-                    src="/images/logo/logo-esteso.svg"
+                    src="/images/logo/logo-simbolo.svg"
                     alt="logo"
-                    className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
+                    className="hidden dark:block"
+                    width={100}
+                    height={50}
                   />
                 </Link>
                 <div className="flex items-center">
