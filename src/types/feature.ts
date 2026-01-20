@@ -8,4 +8,5 @@ export type Feature = {
   image?: string;
   relatedFeatures?: Feature[];
   gallery?: string
+  component?: JSX.Element;
 };

@@ -1,4 +1,5 @@
 import {Feature} from "@/types/feature";
+import LavorazioneAlluminio from "@/components/Products/LavorazioneAlluminio";
 
 const productsData: Feature[] = [
   {
@@ -16,14 +17,25 @@ const productsData: Feature[] = [
     title: "Lavorazioni in alluminio",
     image: "/images/products/alluminio.jpg",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum. Neque sodales ut etiam sit amet. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Quam pellentesque nec nam aliquam sem et tortor consequat. Pellentesque adipiscing commodo elit at imperdiet. Semper auctor neque vitae tempus quam pellentesque nec. Amet dictum sit amet justo donec enim diam. Varius sit amet mattis vulputate enim nulla aliquet porttitor. Odio pellentesque diam volutpat commodo sed.",
+      "Lavorazioni in alluminio su misura a Capaccio Paestum: Capo Serramenti realizza infissi, serramenti, porte, zanzariere e soluzioni in alluminio a taglio termico e legno-alluminio, garantendo qualità, resistenza e durata nel tempo.",
+    description: "",
+    component: <LavorazioneAlluminio />,
     relatedFeatures: [
       {
         id: "pvc",
         title: "PVC",
         paragraph: "il pvc è bello"
-      }
+      },
+      {
+        id: "taglio termico",
+        title: "Taglio Termico",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico 2",
+        title: "Taglio Termico 2",
+        paragraph: "il pvc è bello"
+      },
     ],
     gallery: "/gallery?imageTags=alluminio"
   },

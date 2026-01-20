@@ -16,7 +16,7 @@ const ProductDetails = ({product}: { product: Feature }) => {
               <div>
                 <h1
                   className="mb-8 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight dark:text-white">
-                  {product.id}
+                  {product.title}
                 </h1>
                 <div>
                   <p
@@ -33,34 +33,11 @@ const ProductDetails = ({product}: { product: Feature }) => {
                       />
                     </div>
                   </div>
-                  <p
-                    className="text-body-color mb-8 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    {product.description}
-                  </p>
-                  <p
-                    className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Semper auctor neque vitae tempus quam pellentesque nec.
-                    <span className="text-primary underline dark:text-white">
-                      {" "}
-                      Amet dictum sit amet justo{" "}
-                    </span>
-                    donec enim diam. Varius sit amet mattis vulputate enim nulla
-                    aliquet porttitor. Odio pellentesque diam volutpat commodo
-                    sed.
-                  </p>
-                  <div
-                    className="bg-primary/10 relative z-10 mb-10 overflow-hidden rounded-md p-8 md:p-9 lg:p-8 xl:p-9">
-                    <p className="text-body-color text-center text-base font-medium italic">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod incididunt utionals labore et dolore magna
-                      aliqua. Quis lobortis scelerisque fermentum, The Neque ut
-                      etiam sit amet.
-                    </p>
-                  </div>
+                  {product.component ?? null}
+                  {product.gallery &&
+                    <TagButton text={`Vai alla galleria: ${product.title}`} href={product.gallery}></TagButton>
+                  }
                 </div>
-                {product.gallery &&
-                  <TagButton text="Visita la galleria per questo prodotto" href={product.gallery}></TagButton>
-                }
               </div>
             </div>
             <div className="w-full px-4 lg:w-4/12">
