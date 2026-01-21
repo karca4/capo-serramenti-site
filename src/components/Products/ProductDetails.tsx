@@ -4,7 +4,9 @@ import Image from "next/image";
 import ContactBox from "@/components/Contact/ContactBox";
 import {Feature} from "@/types/feature";
 import RelatedProduct from "@/components/Products/RelatedProduct";
-import TagButton from "@/components/Blog/TagButton";
+import { MdOutlinePhoto} from "react-icons/md";
+import Link from "next/link";
+import {GrGallery} from "react-icons/gr";
 
 const ProductDetails = ({product}: { product: Feature }) => {
   return (
@@ -35,7 +37,13 @@ const ProductDetails = ({product}: { product: Feature }) => {
                   </div>
                   {product.component ?? null}
                   {product.gallery &&
-                    <TagButton text={`Vai alla galleria: ${product.title}`} href={product.gallery}></TagButton>
+                    <Link
+                    href={product.gallery}
+                    className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-lg text-white duration-300 ease-in-out hover:bg-primary/80"
+                    >
+                    <GrGallery className="mr-2 inline-block text-lg"/>
+                    Vai alla galleria per questo prodotto
+                    </Link>
                   }
                 </div>
               </div>

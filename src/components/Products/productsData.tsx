@@ -1,5 +1,11 @@
 import {Feature} from "@/types/feature";
 import LavorazioneAlluminio from "@/components/Products/LavorazioneAlluminio";
+import PVC from "@/components/Products/PVC";
+import Zanzariere from "@/components/Products/Zanzariere";
+import LavorazioneFerro from "@/components/Products/LavorazioneFerro";
+import Blindati from "@/components/Products/Blindati";
+import Strutture from "@/components/Products/Strutture";
+import Interni from "@/components/Products/Interni";
 
 const productsData: Feature[] = [
   {
@@ -54,6 +60,26 @@ const productsData: Feature[] = [
     title: "PVC",
     paragraph:
       "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    description: "",
+    component: <PVC />,
+    relatedFeatures: [
+      {
+        id: "pvc",
+        title: "PVC",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico",
+        title: "Taglio Termico",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico 2",
+        title: "Taglio Termico 2",
+        paragraph: "il pvc è bello"
+      },
+    ],
+    gallery: "/gallery?imageTags=alluminio"
   },
   {
     id: "zanzariere",
@@ -70,6 +96,26 @@ const productsData: Feature[] = [
     title: "Zanzariere",
     paragraph:
       "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    description: "",
+    component: <Zanzariere />,
+    relatedFeatures: [
+      {
+        id: "pvc",
+        title: "PVC",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico",
+        title: "Taglio Termico",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico 2",
+        title: "Taglio Termico 2",
+        paragraph: "il pvc è bello"
+      },
+    ],
+    gallery: "/gallery?imageTags=alluminio"
   },
   {
     id: "ferro",
@@ -86,6 +132,26 @@ const productsData: Feature[] = [
     title: "Lavorazioni in ferro",
     paragraph:
       "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    description: "",
+    component: <LavorazioneFerro />,
+    relatedFeatures: [
+      {
+        id: "pvc",
+        title: "PVC",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico",
+        title: "Taglio Termico",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico 2",
+        title: "Taglio Termico 2",
+        paragraph: "il pvc è bello"
+      },
+    ],
+    gallery: "/gallery?imageTags=alluminio"
   },
   {
     id: "blindati",
@@ -102,6 +168,26 @@ const productsData: Feature[] = [
     title: "Lavorazioni in ferro",
     paragraph:
       "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    description: "",
+    component: <Blindati />,
+    relatedFeatures: [
+      {
+        id: "pvc",
+        title: "PVC",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico",
+        title: "Taglio Termico",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico 2",
+        title: "Taglio Termico 2",
+        paragraph: "il pvc è bello"
+      },
+    ],
+    gallery: "/gallery?imageTags=alluminio"
   },
   {
     id: "strutture",
@@ -117,6 +203,26 @@ const productsData: Feature[] = [
     title: "Strutture e tende da sole",
     paragraph:
       "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    description: "",
+    component: <Strutture />,
+    relatedFeatures: [
+      {
+        id: "pvc",
+        title: "PVC",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico",
+        title: "Taglio Termico",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico 2",
+        title: "Taglio Termico 2",
+        paragraph: "il pvc è bello"
+      },
+    ],
+    gallery: "/gallery?imageTags=alluminio"
   },
   {
     id: "interni",
@@ -133,6 +239,26 @@ const productsData: Feature[] = [
     title: "Opere per interni",
     paragraph:
       "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+    description: "",
+    component: <Interni />,
+    relatedFeatures: [
+      {
+        id: "pvc",
+        title: "PVC",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico",
+        title: "Taglio Termico",
+        paragraph: "il pvc è bello"
+      },
+      {
+        id: "taglio termico 2",
+        title: "Taglio Termico 2",
+        paragraph: "il pvc è bello"
+      },
+    ],
+    gallery: "/gallery?imageTags=alluminio"
   },
 ];
 export default productsData;
