@@ -3,65 +3,51 @@
 
 const PVC = () => {
   return (
-    <div className="lavorazioni-alluminio">
-      <section className="descrizione">
-        <p
-          className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
-        >
-          La <strong>lavorazione dell’alluminio</strong> rappresenta il cuore storico e produttivo di <strong>Capo
-          Serramenti</strong>, punto di partenza di un percorso di crescita artigianale e professionale iniziato nel
-          1993. Grazie alle sue caratteristiche uniche — <strong>leggerezza, resistenza e inalterabilità nel
-          tempo</strong> — l’alluminio è uno dei materiali più performanti per la realizzazione di <strong>serramenti e
-          infissi di qualità</strong>.
-        </p>
-        <p
-          className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
-        >
-          Capo Serramenti progetta e realizza <strong>soluzioni in alluminio su misura</strong>, combinando tradizione
-          artigiana e tecnologie moderne per garantire prodotti affidabili, sicuri ed esteticamente curati. Ogni
-          lavorazione è personalizzata in base alle esigenze del cliente, con particolare attenzione a isolamento,
-          funzionalità e design.
-        </p>
-        <p
-          className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
-        >
-          I nostri serramenti in alluminio sono ideali per:
-        </p>
-        <ul className="mb-10 list-disc list-inside text-base font-medium text-body-color">
-          <li>Porte e portoni di ingresso</li>
-          <li>Porte per uscita di sicurezza</li>
-          <li>Infissi in alluminio</li>
-          <li>Zanzariere su misura</li>
-          <li>Persiane</li>
-          <li>Tapparelle avvolgibili</li>
-          <li>Cassonetti</li>
-          <li>Veneziane</li>
-          <li>Vetrine per negozi</li>
-          <li>Verande e chiusure per esterni</li>
-        </ul>
-      </section>
+    <div className="lavorazioni-pvc">
+      <p
+        className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
+      >
+        Da anni <strong>Capo Serramenti</strong> propone <strong>soluzioni in PVC di alto livello</strong>,
+        collaborando
+        con partner qualificati e selezionati nel settore del PVC. L’esperienza maturata nel tempo consente di
+        offrire <strong>infissi in PVC su misura</strong> affidabili, performanti e adatti a ogni contesto abitativo o
+        commerciale.
+      </p>
 
       <p
         className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
       >
-        Capo Serramenti offre anche soluzioni tecniche avanzate:
+        Il PVC è un materiale sempre più scelto per la realizzazione di serramenti grazie alle sue eccellenti
+        proprietà
+        isolanti e alla grande versatilità estetica. Le soluzioni firmate Capo Serramenti uniscono tecnologia, qualità
+        dei materiali e cura artigianale, garantendo comfort, sicurezza e un ottimo rapporto qualità-prezzo.
+      </p>
+      <p
+        className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
+      >
+        Perché scegliere il PVC
       </p>
       <ul className="mb-10 list-disc list-inside text-base font-medium text-body-color">
-        <li><strong>Alluminio a taglio termico</strong>, per un elevato isolamento termico e acustico</li>
-        <li><strong>Legno-alluminio</strong>, che unisce il calore del legno alla resistenza dell’alluminio</li>
+        <li><strong>Ottimo isolamento termico</strong>, ideale per migliorare l’efficienza energetica dell’abitazione
+        </li>
+        <li><strong>Isolamento acustico</strong>, per un maggiore comfort abitativo</li>
+        <li><strong>Elevata resistenza agli agenti atmosferici</strong></li>
+        <li><strong>Inalterabilità nel tempo</strong> e minima manutenzione</li>
+        <li><strong>Ottimo rapporto qualità-prezzo</strong></li>
+        <li><strong>Design moderno e personalizzabile</strong></li>
       </ul>
-
       <p
         className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
       >
-        Grazie all’esperienza maturata in oltre trent’anni di attività, Capo Serramenti è in grado di
-        realizzare <strong>qualsiasi tipo di lavorazione in alluminio</strong>, proponendo soluzioni durature,
-        performanti e perfettamente in linea con le esigenze estetiche e funzionali del cliente. Il nostro obiettivo è
-        sempre lo stesso: <strong>trovare la soluzione migliore, su misura e destinata a durare nel tempo.</strong>
+        Grazie alla collaborazione con aziende leader nel settore del PVC, Capo Serramenti è in grado di
+        proporre <strong>serramenti
+        in PVC efficienti, durevoli e su misura</strong>, studiati per soddisfare le esigenze di comfort, estetica e
+        risparmio energetico del cliente. Ogni progetto è seguito con attenzione, dalla consulenza iniziale
+        all’installazione finale.
       </p>
     </div>
-
-  );
+  )
+    ;
 }
 
 export default PVC;

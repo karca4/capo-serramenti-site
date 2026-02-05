@@ -1,7 +1,7 @@
 import {Metadata} from "next";
 import productsData from "@/components/Products/productsData";
 import ProductDetails from "@/components/Products/ProductDetails";
-import {redirect, RedirectType} from 'next/navigation'
+import {redirect} from 'next/navigation'
 
 interface Props {
   params: Promise<{ product: string }>;

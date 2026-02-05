@@ -4,7 +4,6 @@ import Image from "next/image";
 import ContactBox from "@/components/Contact/ContactBox";
 import {Feature} from "@/types/feature";
 import RelatedProduct from "@/components/Products/RelatedProduct";
-import { MdOutlinePhoto} from "react-icons/md";
 import Link from "next/link";
 import {GrGallery} from "react-icons/gr";
 

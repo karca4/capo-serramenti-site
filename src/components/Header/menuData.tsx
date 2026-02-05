@@ -50,8 +50,8 @@ const menuData: Menu[] = [
       },
       {
         id: 26,
-        title: "Strutture e tende da sole",
-        path: "/product-details/strutture",
+        title: "Tende da sole",
+        path: "/product-details/tende",
         newTab: false,
       },
       {

@@ -4,7 +4,7 @@ export type Feature = {
   icon?: JSX.Element;
   title: string;
   paragraph: string;
-  description?: string;
+  featurePage?: string;
   image?: string;
   relatedFeatures?: Feature[];
   gallery?: string

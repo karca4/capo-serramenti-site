@@ -3,63 +3,41 @@
 
 const Interni = () => {
   return (
-    <div className="lavorazioni-alluminio">
-      <section className="descrizione">
-        <p
-          className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
-        >
-          La <strong>lavorazione dell’alluminio</strong> rappresenta il cuore storico e produttivo di <strong>Capo
-          Serramenti</strong>, punto di partenza di un percorso di crescita artigianale e professionale iniziato nel
-          1993. Grazie alle sue caratteristiche uniche — <strong>leggerezza, resistenza e inalterabilità nel
-          tempo</strong> — l’alluminio è uno dei materiali più performanti per la realizzazione di <strong>serramenti e
-          infissi di qualità</strong>.
-        </p>
-        <p
-          className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
-        >
-          Capo Serramenti progetta e realizza <strong>soluzioni in alluminio su misura</strong>, combinando tradizione
-          artigiana e tecnologie moderne per garantire prodotti affidabili, sicuri ed esteticamente curati. Ogni
-          lavorazione è personalizzata in base alle esigenze del cliente, con particolare attenzione a isolamento,
-          funzionalità e design.
-        </p>
-        <p
-          className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
-        >
-          I nostri serramenti in alluminio sono ideali per:
-        </p>
-        <ul className="mb-10 list-disc list-inside text-base font-medium text-body-color">
-          <li>Porte e portoni di ingresso</li>
-          <li>Porte per uscita di sicurezza</li>
-          <li>Infissi in alluminio</li>
-          <li>Zanzariere su misura</li>
-          <li>Persiane</li>
-          <li>Tapparelle avvolgibili</li>
-          <li>Cassonetti</li>
-          <li>Veneziane</li>
-          <li>Vetrine per negozi</li>
-          <li>Verande e chiusure per esterni</li>
-        </ul>
-      </section>
+    <div className="opere-interni">
+      <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+        Le <strong>opere per interni</strong> firmate <strong>Capo Serramenti</strong> nascono per valorizzare gli spazi abitativi con soluzioni su misura, curate nei minimi dettagli. Ogni progetto è studiato per integrarsi armoniosamente con lo stile dell’ambiente, offrendo comfort, praticità ed estetica.
+      </p>
 
+      <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+        Grazie all’esperienza maturata nella lavorazione di alluminio, ferro e materiali innovativi, realizziamo <strong>scale interne</strong>, <strong>porte interne</strong> e <strong>box doccia</strong> su misura, garantendo solidità strutturale, funzionalità quotidiana e una lunga durata nel tempo.
+      </p>
+
+      <ul className="mb-10 list-disc list-inside text-base font-medium text-body-color">
+        <li>Scale interne su misura in metallo e materiali combinati</li>
+        <li>Porte interne personalizzate</li>
+        <li>Box doccia su misura</li>
+        <li>Soluzioni per abitazioni private</li>
+        <li>Progetti personalizzati per ristrutturazioni e nuove costruzioni</li>
+      </ul>
       <p
         className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
       >
-        Capo Serramenti offre anche soluzioni tecniche avanzate:
+        Le nostre opere per interni offrono numerosi vantaggi:
       </p>
+
       <ul className="mb-10 list-disc list-inside text-base font-medium text-body-color">
-        <li><strong>Alluminio a taglio termico</strong>, per un elevato isolamento termico e acustico</li>
-        <li><strong>Legno-alluminio</strong>, che unisce il calore del legno alla resistenza dell’alluminio</li>
+        <li><strong>Design su misura</strong></li>
+        <li><strong>Ottimizzazione degli spazi interni</strong></li>
+        <li><strong>Materiali di qualità</strong></li>
+        <li><strong>Funzionalità e comfort</strong></li>
+        <li><strong>Cura artigianale dei dettagli</strong></li>
       </ul>
 
-      <p
-        className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed"
-      >
-        Grazie all’esperienza maturata in oltre trent’anni di attività, Capo Serramenti è in grado di
-        realizzare <strong>qualsiasi tipo di lavorazione in alluminio</strong>, proponendo soluzioni durature,
-        performanti e perfettamente in linea con le esigenze estetiche e funzionali del cliente. Il nostro obiettivo è
-        sempre lo stesso: <strong>trovare la soluzione migliore, su misura e destinata a durare nel tempo.</strong>
+      <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+        Capo Serramenti realizza <strong>opere per interni a Capaccio Paestum e in provincia di Salerno</strong>, offrendo soluzioni su misura pensate per migliorare la qualità e l’estetica degli ambienti domestici, con l’affidabilità di una lavorazione artigianale.
       </p>
     </div>
+
 
   );
 }
