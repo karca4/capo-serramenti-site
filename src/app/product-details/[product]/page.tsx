@@ -8,8 +8,8 @@ interface Props {
 }
 
 export const metadata: Metadata = {
-  title: "Product Details | Capo Serramenti",
-  description: "Pagina dettagli prodotto",
+  title: "Prodotti | Capo Serramenti – Infissi, Serramenti e Soluzioni su Misura",
+  description: "Scopri i prodotti di Capo Serramenti: infissi in alluminio, PVC e ferro, zanzariere, porte blindate, tende da sole e soluzioni su misura a Capaccio Paestum.",
 };
 
 const ProductDetailsPage = async ({params}: Props) => {

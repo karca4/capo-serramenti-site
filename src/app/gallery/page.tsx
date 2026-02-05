@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import Gallery from "@/components/Gallery";
 
 export const metadata: Metadata = {
-  title: "Contact Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Contact Page for Startup Nextjs Template",
+  title: "Galleria Lavori | Capo Serramenti – Serramenti e Realizzazioni su Misura",
+  description: "Scopri la galleria dei lavori Capo Serramenti: infissi, serramenti, strutture in alluminio e ferro realizzate su misura a Capaccio Paestum e provincia di Salerno.",
   // other metadata
 };
 

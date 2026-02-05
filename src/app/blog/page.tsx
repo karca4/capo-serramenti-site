@@ -5,8 +5,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Page for Startup Nextjs Template",
+  title: "News e Novità | Capo Serramenti – Aggiornamenti su Serramenti e Infissi",
+  description: "Resta aggiornato con le ultime novità di Capo Serramenti: nuovi prodotti, progetti realizzati, consigli su serramenti, infissi e zanzariere su misura a Capaccio Paestum.",
   // other metadata
 };
 

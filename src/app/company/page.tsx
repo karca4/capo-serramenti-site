@@ -3,9 +3,9 @@ import { Metadata } from "next";
 import Company from "@/components/Company";
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
-  // other metadata
+  title: "Chi Siamo | Capo Serramenti – Serramenti su Misura a Capaccio Paestum",
+  description: "Capo Serramenti nasce da oltre 30 anni di esperienza nella lavorazione di alluminio e ferro. Serramenti su misura, qualità artigianale e soluzioni affidabili a Capaccio Paestum.",
+
 };
 
 const CompanyPage = () => {
