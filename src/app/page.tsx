@@ -6,8 +6,8 @@ import Hero from "@/components/Hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Hero for Startup Nextjs Template",
+  title: "Capo Serramenti | Infissi, Serramenti e Zanzariere su Misura a Capaccio Paestum",
+  description: "Capo Serramenti realizza infissi, serramenti, zanzariere, porte blindate e strutture su misura in alluminio, PVC e ferro a Capaccio Paestum (Salerno). Qualità artigianale dal 1993.",
   // other metadata
 };
 
