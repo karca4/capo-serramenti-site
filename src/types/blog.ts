@@ -12,4 +12,5 @@ export type Blog = {
   author?: Author | null;
   tags: string[];
   publishDate: string;
+  url?: string;
 };
