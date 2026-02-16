@@ -30,18 +30,8 @@ const productsData: Feature[] = [
       {
         id: "pvc",
         title: "PVC",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico",
-        title: "Taglio Termico",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico 2",
-        title: "Taglio Termico 2",
-        paragraph: "il pvc è bello"
-      },
+        paragraph: ""
+      }
     ],
     gallery: "/gallery?imageTags=alluminio"
   },
@@ -63,23 +53,7 @@ const productsData: Feature[] = [
       "Infissi e serramenti in PVC su misura a Capaccio Paestum: Capo Serramenti realizza soluzioni ad alta efficienza energetica, con materiali di qualità, isolamento termico e acustico, durata e design moderno.",
     featurePage: "/product-details/pvc",
     component: <PVC />,
-    relatedFeatures: [
-      {
-        id: "pvc",
-        title: "PVC",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico",
-        title: "Taglio Termico",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico 2",
-        title: "Taglio Termico 2",
-        paragraph: "il pvc è bello"
-      },
-    ],
+    relatedFeatures: [],
     gallery: "/gallery?imageTags=pvc"
   },
   {
@@ -100,23 +74,7 @@ const productsData: Feature[] = [
       "Zanzariere su misura a Capaccio Paestum: Capo Serramenti realizza zanzariere funzionali, resistenti e personalizzate, ideali per proteggere gli ambienti da insetti senza rinunciare a comfort, luce e design.",
     featurePage: "/product-details/zanzariere",
     component: <Zanzariere />,
-    relatedFeatures: [
-      {
-        id: "pvc",
-        title: "PVC",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico",
-        title: "Taglio Termico",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico 2",
-        title: "Taglio Termico 2",
-        paragraph: "il pvc è bello"
-      },
-    ],
+    relatedFeatures: [],
     gallery: "/gallery?imageTags=zanzariere"
   },
   {
@@ -137,23 +95,7 @@ const productsData: Feature[] = [
       "Lavorazioni in ferro su misura a Capaccio Paestum: Capo Serramenti realizza serramenti e strutture in ferro di piccole e medie dimensioni, unendo esperienza trentennale, solidità e cura artigianale.",
     featurePage: "/product-details/ferro",
     component: <LavorazioneFerro />,
-    relatedFeatures: [
-      {
-        id: "pvc",
-        title: "PVC",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico",
-        title: "Taglio Termico",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico 2",
-        title: "Taglio Termico 2",
-        paragraph: "il pvc è bello"
-      },
-    ],
+    relatedFeatures: [],
     gallery: "/gallery?imageTags=ferro"
   },
   {
@@ -174,23 +116,7 @@ const productsData: Feature[] = [
       "Porte e infissi blindati su misura a Capaccio Paestum: Capo Serramenti realizza soluzioni blindate sicure, robuste e personalizzate, ideali per proteggere abitazioni e attività commerciali.",
     featurePage: "/product-details/blindati",
     component: <Blindati />,
-    relatedFeatures: [
-      {
-        id: "pvc",
-        title: "PVC",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico",
-        title: "Taglio Termico",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico 2",
-        title: "Taglio Termico 2",
-        paragraph: "il pvc è bello"
-      },
-    ],
+    relatedFeatures: [],
     gallery: "/gallery?imageTags=blindati"
   },
   {
@@ -210,23 +136,7 @@ const productsData: Feature[] = [
       "Gazebo e tende da sole su misura a Capaccio Paestum: Capo Serramenti realizza soluzioni per esterni funzionali ed eleganti, ideali per proteggere e valorizzare spazi outdoor residenziali e commerciali.",
     featurePage: "/product-details/tende",
     component: <Tende />,
-    relatedFeatures: [
-      {
-        id: "pvc",
-        title: "PVC",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico",
-        title: "Taglio Termico",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico 2",
-        title: "Taglio Termico 2",
-        paragraph: "il pvc è bello"
-      },
-    ],
+    relatedFeatures: [],
     gallery: "/gallery?imageTags=tende"
   },
   {
@@ -247,23 +157,7 @@ const productsData: Feature[] = [
       "Opere per interni su misura a Capaccio Paestum: Capo Serramenti realizza scale interne, porte interne e box doccia personalizzati, unendo funzionalità, design e qualità artigianale.",
     featurePage: "/product-details/interni",
     component: <Interni />,
-    relatedFeatures: [
-      {
-        id: "pvc",
-        title: "PVC",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico",
-        title: "Taglio Termico",
-        paragraph: "il pvc è bello"
-      },
-      {
-        id: "taglio termico 2",
-        title: "Taglio Termico 2",
-        paragraph: "il pvc è bello"
-      },
-    ],
+    relatedFeatures: [],
     gallery: "/gallery?imageTags=interni"
   },
 ];

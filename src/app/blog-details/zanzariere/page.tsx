@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import {Metadata} from "next";
-import blogData from "@/components/Blog/blogData";
+import blogData from "@/configuration/blogData";
 
 export const metadata: Metadata = {
   title: "Nuove soluzioni per zanzariere: comfort e protezione per l’estate",

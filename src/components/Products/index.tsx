@@ -1,6 +1,6 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleProduct from "./SingleProduct";
-import productsData from "./productsData";
+import productsData from "../../configuration/productsData";
 
 const Products = () => {
   return (

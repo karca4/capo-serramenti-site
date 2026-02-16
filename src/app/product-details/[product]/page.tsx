@@ -1,5 +1,5 @@
 import {Metadata} from "next";
-import productsData from "@/components/Products/productsData";
+import productsData from "@/configuration/productsData";
 import ProductDetails from "@/components/Products/ProductDetails";
 import {redirect} from 'next/navigation'
 

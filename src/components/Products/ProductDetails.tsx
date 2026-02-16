@@ -37,26 +37,27 @@ const ProductDetails = ({product}: { product: Feature }) => {
                   {product.component ?? null}
                   {product.gallery &&
                     <Link
-                    href={product.gallery}
-                    className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-lg text-white duration-300 ease-in-out hover:bg-primary/80"
+                      href={product.gallery}
+                      className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-lg text-white duration-300 ease-in-out hover:bg-primary/80"
                     >
-                    <GrGallery className="mr-2 inline-block text-lg"/>
-                    Vai alla galleria per questo prodotto
+                      <GrGallery className="mr-2 inline-block text-lg"/>
+                      Vai alla galleria per questo prodotto
                     </Link>
                   }
                 </div>
               </div>
             </div>
             <div className="w-full px-4 lg:w-4/12">
-              <div
-                className="shadow-three dark:bg-gray-dark relative z-10 rounded-xs bg-white p-8 sm:p-11 lg:p-8 xl:p-11">
-                <h3
-                  className="mb-4 text-3xl leading-tight text-black dark:text-white">
-                  Prodotti correlati
-                </h3>
-                <ul className="p-8">
-                  {
-                    product.relatedFeatures?.map((feature: Feature, idx: number) => (
+
+              {
+                product.relatedFeatures?.map((feature: Feature, idx: number) => (
+                  <div
+                    className="shadow-three dark:bg-gray-dark relative z-10 rounded-xs bg-white p-8 sm:p-11 lg:p-8 xl:p-11">
+                    <h3
+                      className="mb-4 text-3xl leading-tight text-black dark:text-white">
+                      Prodotti correlati
+                    </h3>
+                    <ul className="p-8">
                       <li
                         key={feature.id ?? idx}
                         className="border-body-color/10 mb-6 border-b pb-6 dark:border-white/10"
@@ -68,10 +69,10 @@ const ProductDetails = ({product}: { product: Feature }) => {
                           paragraph={feature.paragraph ?? ""}
                         />
                       </li>
-                    ))
-                  }
-                </ul>
-              </div>
+                    </ul>
+                  </div>
+                ))
+              }
               <ContactBox/>
             </div>
           </div>
