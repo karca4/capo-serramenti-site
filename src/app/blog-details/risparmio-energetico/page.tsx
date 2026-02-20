@@ -4,14 +4,14 @@ import {Metadata} from "next";
 import blogData from "@/configuration/blogData";
 
 export const metadata: Metadata = {
-  title: "Nuove soluzioni per zanzariere: comfort e protezione per l’estate",
-  description: "Scopri le nuove soluzioni per zanzariere: sistemi moderni, su misura e dal design elegante per proteggere la casa durante l’estate, migliorando comfort e aerazione degli ambienti.",
+  title: "Infissi in Alluminio Taglio Termico e PVC | Risparmio Energetico a Capaccio",
+  description: "Scopri gli infissi in alluminio a taglio termico e PVC per migliorare l’efficienza energetica della tua casa a Capaccio e Salerno. Isolamento, comfort e risparmio in bolletta.",
   // other metadata
 };
 
-const data = blogData.find(b => b.id === 1);
+const data = blogData.find(b => b.id === 2);
 
-const BlogZanzarierePage = () => {
+const BlogRisparmioEnergeticoPage = () => {
   return (
     <>
       <section className="pt-[150px] pb-[120px]">
@@ -60,27 +60,23 @@ const BlogZanzarierePage = () => {
                     </div>
                   </div>
                   <div className="mb-5">
-                    <div className="mb-5">
-                      { data.tags?.length && data.tags.map(tag => (
-                        <a
-                          href="#0"
-                          className="bg-primary inline-flex items-center justify-center rounded-full px-4 py-2 mx-1 text-sm font-semibold text-white"
-                        >
-                          {tag}
-                        </a>
-                      ))}
-                    </div>
+                    { data.tags?.length && data.tags.map(tag => (
+                      <a
+                        href="#0"
+                        className="bg-primary inline-flex items-center justify-center rounded-full px-4 py-2 mx-1 text-sm font-semibold text-white"
+                      >
+                        {tag}
+                      </a>
+                    ))}
                   </div>
                 </div>
                 <div>
                   <p
                     className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Le zanzariere di nuova generazione rappresentano oggi una soluzione pratica, elegante e
-                    indispensabile per vivere la casa in totale comfort.
-                    Negli ultimi anni il settore ha fatto grandi passi avanti: le nuove soluzioni per zanzariere
-                    uniscono funzionalità, design e resistenza, adattandosi perfettamente a ogni tipo di infisso. Non si
-                    tratta più solo di una semplice rete protettiva, ma di un vero e proprio elemento integrato nel
-                    serramento.
+                    Negli ultimi anni il tema dell’efficienza energetica è diventato centrale nella scelta degli infissi.
+                    Le moderne soluzioni in alluminio a taglio termico e PVC rappresentano oggi un importante passo avanti
+                    rispetto ai tradizionali serramenti in legno o alluminio non isolato, garantendo maggiore isolamento
+                    termico, comfort abitativo e riduzione dei consumi.
                   </p>
                   <div className="mb-10 w-full overflow-hidden rounded-sm">
                     <div className="relative aspect-97/60 w-full sm:aspect-97/44">
@@ -92,66 +88,51 @@ const BlogZanzarierePage = () => {
                       />
                     </div>
                   </div>
-                  <h3
-                    className="font-xl mb-10 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
-                    Perché scegliere le nuove zanzariere?
+                  <h3 className="font-xl mb-10 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
+                    Infissi in PVC: isolamento naturale e massima efficienza
                   </h3>
-                  <p
-                    className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Le moderne zanzariere offrono numerosi vantaggi:
+
+                  <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                    Il PVC è uno dei materiali più performanti dal punto di vista dell’isolamento termico.
+                    Grazie alla sua struttura interna a camere multiple, riduce al minimo la dispersione di calore
+                    e contribuisce a mantenere stabile la temperatura interna dell’abitazione.
+
+                    Rispetto a soluzioni tradizionali in legno o alluminio non isolato, gli infissi in PVC garantiscono:
                   </p>
+
                   <ul className="text-body-color mb-10 list-inside list-disc">
                     <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
-                      Protezione efficace contro zanzare e insetti
+                      Elevato isolamento termico e acustico
                     </li>
                     <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
-                      Migliore aerazione degli ambienti
+                      Riduzione dei consumi energetici
                     </li>
                     <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
-                      Sistemi scorrevoli, a molla o plissettati
+                      Assenza di manutenzione nel tempo
                     </li>
                     <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
-                      Design discreto ed elegante
+                      Resistenza agli agenti atmosferici
                     </li>
                     <li className="text-body-color mb-2 text-base font-medium sm:text-lg lg:text-base xl:text-lg">
-                      Materiali resistenti e durevoli nel tempo
+                      Ottimo rapporto qualità-prezzo
                     </li>
                   </ul>
-                  <p
-                    className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Grazie alle innovazioni tecniche, oggi è possibile installare zanzariere su misura per finestre,
-                    porte-finestre, balconi e verande, con soluzioni adatte anche a grandi aperture.
-                  </p>
 
-                  <h3
-                    className="font-xl mb-10 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
-                    Comfort e benessere durante l’estate
+                  <h3 className="font-xl mb-10 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
+                    Perché superano le soluzioni tradizionali?
                   </h3>
-                  <p
-                    className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Le zanzariere permettono di vivere la casa in modo più naturale, riducendo l’uso di climatizzatori e
-                    favorendo il ricambio d’aria. Questo significa ambienti più salubri e risparmio energetico, due
-                    aspetti sempre più importanti per le famiglie.
 
-                    Inoltre, le nuove reti sono progettate per garantire maggiore trasparenza e luminosità, senza
-                    compromettere la visibilità verso l’esterno.
-                  </p>
+                  <p className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                    Gli infissi in legno, seppur esteticamente eleganti, richiedono manutenzione costante e nel tempo
+                    possono perdere efficienza. L’alluminio tradizionale, invece, senza taglio termico favorisce la dispersione
+                    di calore.
 
-                  <h3
-                    className="font-xl mb-10 leading-tight font-bold text-black sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight dark:text-white">
-                    Zanzariere su misura per ogni esigenza
-                  </h3>
-                  <p
-                    className="text-body-color mb-10 text-base leading-relaxed font-medium sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Ogni abitazione ha caratteristiche diverse: per questo è fondamentale scegliere soluzioni
-                    personalizzate. Le zanzariere moderne possono essere integrate perfettamente agli infissi esistenti,
-                    mantenendo estetica e funzionalità.
+                    Le moderne soluzioni in alluminio a taglio termico e PVC rappresentano oggi la scelta più intelligente
+                    per chi desidera migliorare la classe energetica dell’abitazione, aumentare il comfort e valorizzare
+                    il proprio immobile.
 
-                    Con l’estate alle porte, investire in zanzariere di qualità significa migliorare il comfort
-                    quotidiano e proteggere la propria casa in modo semplice ed efficace.
-
-                    Se stai valutando l’installazione di nuove zanzariere, questo è il momento giusto per scegliere una
-                    soluzione su misura e prepararti alla stagione calda senza pensieri.
+                    Investire in serramenti ad alta efficienza significa non solo risparmiare oggi, ma proteggere il valore
+                    della propria casa nel lungo periodo.
                   </p>
                 </div>
               </div>
@@ -163,4 +144,4 @@ const BlogZanzarierePage = () => {
   );
 };
 
-export default BlogZanzarierePage;
+export default BlogRisparmioEnergeticoPage;
