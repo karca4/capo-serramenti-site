@@ -1,31 +1,51 @@
-"use client";
+import Footer from "@/theme/components/layout/Footer";
+import Header from "@/theme/components/layout/Header";
+import { Providers } from "@/theme/components/layout/Providers";
+import ScrollToTop from "@/theme/components/layout/ScrollToTop";
+import { whatsappUrl } from "@/theme/components/common/SocialIcon";
+import { bodyFont, headingFont, site } from "@/theme/config/site";
+import {
+  jsonLdScript,
+  localBusinessJsonLd,
+  rootMetadata,
+} from "@/theme/lib/seo";
+import "./globals.css";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import ScrollToTop from "@/components/ScrollToTop";
-import { Inter } from "next/font/google";
-import "../styles/index.css";
-
-const inter = Inter({ subsets: ["latin"] });
+export const metadata = rootMetadata();
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html suppressHydrationWarning lang="it">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
+  const phone = site.contacts.phones[0];
+  const whatsapp = site.contacts.phones.find((p) => p.whatsapp);
+  const whatsappLink = whatsapp ? whatsappUrl(whatsapp.number) : undefined;
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
-        <Providers>
+  return (
+    <html
+      suppressHydrationWarning
+      lang={site.language}
+      className={`${bodyFont.variable} ${headingFont.variable}`}
+    >
+      <body className="dark:bg-black bg-white text-black">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLdScript(localBusinessJsonLd()),
+          }}
+        />
+        <Providers defaultTheme={site.appearance.defaultTheme}>
           <div className="isolate">
-            <Header />
-            {children}
+            <Header
+              navigation={site.navigation}
+              logo={site.logo.full}
+              siteName={site.name}
+              phone={phone}
+              whatsappUrl={whatsappLink}
+              quote={site.cta.quote}
+            />
+            <main>{children}</main>
             <Footer />
           </div>
           <ScrollToTop />
@@ -34,6 +54,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-import { Providers } from "./providers";
-

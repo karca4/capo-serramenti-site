@@ -1,24 +1,19 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import { Metadata } from "next";
-import Company from "@/components/Company";
+import PageHeader from "@/theme/components/common/PageHeader";
+import CompanySections from "@/theme/components/company/CompanySections";
+import { site } from "@/theme/config/site";
+import { pageMetadata } from "@/theme/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Chi Siamo | Capo Serramenti – Serramenti su Misura a Capaccio Paestum",
-  description: "Capo Serramenti nasce da oltre 30 anni di esperienza nella lavorazione di alluminio e ferro. Serramenti su misura, qualità artigianale e soluzioni affidabili a Capaccio Paestum.",
+export const metadata = pageMetadata(site.seo.pages.company, "/company");
 
-};
-
-const CompanyPage = () => {
+export default function CompanyPage() {
   return (
     <>
-      <Breadcrumb
-        pageName="Chi siamo"
-        description="Artigiani per passione, professionisti per scelta"
+      <PageHeader
+        title="Chi siamo"
+        description={site.pages.company.intro}
+        path="/company"
       />
-
-      <Company />
+      <CompanySections />
     </>
   );
-};
-
-export default CompanyPage;
+}

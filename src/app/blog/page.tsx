@@ -1,39 +1,50 @@
-import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/configuration/blogData";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Link from "next/link";
+import BlogCard from "@/theme/components/blog/BlogCard";
+import PageHeader from "@/theme/components/common/PageHeader";
+import { site } from "@/theme/config/site";
+import { pageMetadata } from "@/theme/lib/seo";
 
-import {Metadata} from "next";
+// Finché non ci sono articoli la pagina non va indicizzata.
+export const metadata = pageMetadata(site.seo.pages.blog, "/blog", {
+  noindex: site.blog.length === 0,
+});
 
-export const metadata: Metadata = {
-  title: "News e Novità | Capo Serramenti – Aggiornamenti su Serramenti e Infissi",
-  description: "Resta aggiornato con le ultime novità di Capo Serramenti: nuovi prodotti, progetti realizzati, consigli su serramenti, infissi e zanzariere su misura a Capaccio Paestum.",
-  // other metadata
-};
-
-const Blog = () => {
+export default function BlogPage() {
   return (
     <>
-      <Breadcrumb
-        pageName="News"
-        description="Novità, progetti, consigli e aggiornamenti su serramenti, infissi e zanzariere su misura a Capaccio Paestum e Salerno."
+      <PageHeader
+        title="News"
+        description={site.pages.blog.intro}
+        path="/blog"
       />
 
-      <section className="pt-[120px] pb-[120px]">
+      <section className="py-14 md:py-20">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
-              <div
-                key={blog.id}
-                className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
+          {site.blog.length > 0 ? (
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {site.blog.map((post) => (
+                <BlogCard key={post.slug} post={post} />
+              ))}
+            </div>
+          ) : (
+            <div className="border-primary/10 dark:bg-dark mx-auto max-w-[540px] rounded-lg border bg-white px-8 py-16 text-center dark:border-white/10">
+              <h2 className="mb-3 text-xl font-bold text-black dark:text-white">
+                Presto nuovi contenuti
+              </h2>
+              <p className="text-body-color dark:text-body-color-dark mx-auto mb-8 max-w-[380px] text-base leading-relaxed">
+                Stiamo preparando nuovi contenuti. Nel frattempo, contattaci per
+                una consulenza.
+              </p>
+              <Link
+                href="/contact"
+                className="bg-primary hover:bg-primary/90 inline-block rounded-lg px-7 py-3.5 text-base font-semibold text-white transition-colors"
               >
-                <SingleBlog blog={blog}/>
-              </div>
-            ))}
-          </div>
+                Richiedi un preventivo
+              </Link>
+            </div>
+          )}
         </div>
       </section>
     </>
   );
-};
-
-export default Blog;
+}

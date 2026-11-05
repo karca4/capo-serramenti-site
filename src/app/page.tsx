@@ -1,23 +1,31 @@
-import Blog from "@/components/Blog";
-import Brands from "@/components/Brands";
-import ScrollUp from "@/components/Common/ScrollUp";
-import Products from "@/components/Products";
-import Hero from "@/components/Hero";
-import { Metadata } from "next";
+import CtaBand from "@/theme/components/common/CtaBand";
+import BlogSection from "@/theme/components/home/BlogSection";
+import FeaturesSection from "@/theme/components/home/FeaturesSection";
+import GalleryTeaser from "@/theme/components/home/GalleryTeaser";
+import Hero from "@/theme/components/home/Hero";
+import PartnersSection from "@/theme/components/home/PartnersSection";
+import ProcessSection from "@/theme/components/home/ProcessSection";
+import ProductsSection from "@/theme/components/home/ProductsSection";
+import { site } from "@/theme/config/site";
+import { pageMetadata } from "@/theme/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Capo Serramenti | Infissi, Serramenti e Zanzariere su Misura a Capaccio Paestum",
-  description: "Capo Serramenti realizza infissi, serramenti, zanzariere, porte blindate e strutture su misura in alluminio, PVC e ferro a Capaccio Paestum (Salerno). Qualità artigianale dal 1993.",
-  // other metadata
-};
+export const metadata = pageMetadata(site.seo.pages.home, "/", {
+  absolute: true,
+});
 
-export default function Home() {
+// Le sezioni facoltative (punti di forza, processo, anteprima galleria,
+// news, partner) non vengono mostrate se il sito non le configura.
+export default function HomePage() {
   return (
     <>
-      <ScrollUp />
       <Hero />
-      <Products />
-      <Blog />
+      <FeaturesSection />
+      <ProductsSection />
+      <ProcessSection />
+      <GalleryTeaser />
+      <BlogSection />
+      <PartnersSection />
+      <CtaBand />
     </>
   );
 }

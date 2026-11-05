@@ -1,25 +1,19 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import Contact from "@/components/Contact";
+import PageHeader from "@/theme/components/common/PageHeader";
+import ContactSection from "@/theme/components/contact/ContactSection";
+import { site } from "@/theme/config/site";
+import { pageMetadata } from "@/theme/lib/seo";
 
-import { Metadata } from "next";
+export const metadata = pageMetadata(site.seo.pages.contact, "/contact");
 
-export const metadata: Metadata = {
-  title: "Contatti | Capo Serramenti – Sede e Showroom a Capaccio Paestum",
-  description: "Contatta Capo Serramenti a Capaccio Paestum: richiedi preventivi gratuiti per serramenti, infissi, zanzariere e strutture su misura. Telefono, email e social sempre disponibili.",
-  // other metadata
-};
-
-const ContactPage = () => {
+export default function ContactPage() {
   return (
     <>
-      <Breadcrumb
-        pageName="Contatti"
-        description="Un contatto diretto, una soluzione su misura"
+      <PageHeader
+        title="Contatti"
+        description={site.pages.contact.intro}
+        path="/contact"
       />
-
-      <Contact />
+      <ContactSection />
     </>
   );
-};
-
-export default ContactPage;
+}

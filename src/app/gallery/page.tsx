@@ -1,24 +1,30 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import { Metadata } from "next";
-import Gallery from "@/components/Gallery";
+import PageHeader from "@/theme/components/common/PageHeader";
+import Gallery from "@/theme/components/gallery/Gallery";
+import { site } from "@/theme/config/site";
+import { pageMetadata } from "@/theme/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Galleria Lavori | Capo Serramenti – Serramenti e Realizzazioni su Misura",
-  description: "Scopri la galleria dei lavori Capo Serramenti: infissi, serramenti, strutture in alluminio e ferro realizzate su misura a Capaccio Paestum e provincia di Salerno.",
-  // other metadata
-};
+export const metadata = pageMetadata(site.seo.pages.gallery, "/gallery");
 
-const GalleryPage = () => {
+export default function GalleryPage() {
   return (
     <>
-      <Breadcrumb
-        pageName="Galleria"
-        description="Il nostro lavoro, sotto i tuoi occhi"
+      <PageHeader
+        title="Galleria"
+        description={site.pages.gallery.intro}
+        path="/gallery"
       />
-
-      <Gallery />
+      {site.pages.gallery.text?.length ? (
+        <section className="pt-10 md:pt-14">
+          <div className="container">
+            <div className="text-body-color dark:text-body-color-dark max-w-[820px] space-y-4 text-base leading-relaxed md:text-lg">
+              {site.pages.gallery.text.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+      <Gallery siteName={site.name} />
     </>
   );
-};
-
-export default GalleryPage;
+}

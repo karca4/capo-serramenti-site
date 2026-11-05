@@ -1,0 +1,11 @@
+/*
+  Colori del brand Capo Serramenti.
+  Sovrascrivono i valori predefiniti di src/theme/styles/theme.css:
+  qui vanno solo i token che cambiano da un sito all'altro.
+*/
+@theme {
+  --color-primary: #233769;
+  --color-primary-light: #35528f;
+  --color-accent: #ed8426;
+  --color-accent-light: #f59d4d;
+}
