@@ -9,6 +9,8 @@ const map = [
   ["/products", "/#prodotti"],
   ["/about", "/company"],
   ["/gallery_old", "/gallery"],
+  // Pagine della galleria NextGEN del vecchio sito WordPress.
+  ["/gallery/nggallery/:path*", "/gallery"],
   ["/error", "/"],
   ["/home", "/"],
 ];
